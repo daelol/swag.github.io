@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+	<meta charset="utf-8" />
+	<title>Application</title> 
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/c9_category.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="Ta.css">
+    <link rel="stylesheet" href="../tabs/comp.css">
+    
+    
+<script src="ta.js"></script>
+    <script>
+      "use strict";
+        var $ = function(id) {
+            return document.getElementById(id);
+        };
+        var clearEntries = function() {
+            $("FName").value = "";
+			$("LName").value = "";
+            $("Phonenum").value = "";
+			$("email").value = "";
+            $("message").value = "In a short description describe yourself";
+			$("message2").value = "Why do you want to be a teacher assistant?";
+            $("refname").value = "";
+			$("refPhonenum").value = "";
+            $("refemail").value = "";
+			$("ref2name").value = "";
+            $("Ref2Phonenum").value = "";
+			$("Ref2email").value = "";
+            $("SID").value = "";
+            $("Gender").value = "";
+			
+		};
+
+		window.onload = function() {
+            
+            $("calculate").onclick = clearEntries;
+            
+        };
+         var clearmes = function(){
+           $("message").value = "";
+       };
+        var clearmes2 = function(){
+           $("message2").value = "";
+       };
+    
+    </script>
+        </head>
+<header>
+    <img src="../images/aumblack.png">
+    <h2>Application Form</h2>
+        <h3>Please fill out the form below</h3>
+    </header>
+    
+<body>
+    
+    <div class="navbar">
+  <a href="../index.html">Home</a>
+  <a href="../tabs/ComputerScience.html">Computer Science Info</a>
+  <a href="../tabs/TA.html">Apply for TA</a>
+  <a href="../tabs/gpa.html">GPA Calculator</a>
+
+</div>
+
+ 
+<main>
+    
+    <p><b>Once you click complete an email of the application will be sent to the boss</b></p><br>
+  <h1>Application Form</h1><br>
+    
+   <form name="myform" action="survey_data.html" method="get">
+       
+        <label for="FName">First Name:</label>
+		<input type="text" name="First Name" id="FName"><br>
+        <label for="LName">Last Name:</label>
+		<input type="text" name="Last Name" id="LName"><br> 
+        <label for="SID">Student ID:</label>
+		<input type="text" name="Student ID" id="SID"><br>
+        <label for="Gender">Gender:</label>
+		<input type="text" name="Gender" id="Gender"><br>
+        <label for="Phonenum">Phone Number:</label>
+        <input type="text" name="Phone #" id="Phonenum"><br>
+        <label for="email">AUM Email:</label>
+        <input type="text" name="Email" id="email"><br>
+    <textarea name="message" id="message" rows="10" cols="30" onfocus="clearmes()">In a short description describe yourself
+</textarea><br><br>
+        <textarea name="message2" id="message2" rows="10" cols="30" onfocus="clearmes2()">Why do you want to be a teacher assistant?
+</textarea><br><br>
+        <label for="refname">Reference Name:</label>
+        <input type="text" name="Reference One"  id="refname"><br>
+        <label for="refPhonenum">Phone Number:</label>
+        <input type="text" name="Reference #" id="refPhonenum"><br>
+        <label for="refemail">Email:</label>
+        <input type="text" name="Reference Email" id="refemail"><br>
+        <label for="ref2name">Reference Name:</label>
+        <input type="text" name="Reference Two" id="ref2name"><br>
+        <label for="Ref2Phonenum">Phone Number:</label>
+        <input type="text" name="Reference Two #" id="Ref2Phonenum"><br>
+        <label for="Ref2email">Email:</label>
+        <input type="text" name="Reference Two Email" id="Ref2email"><br>
+        <label>&nbsp;</label>
+        <input type="submit" id="button" value="submit">
+        <input type="button" id="calculate" value="Reset"><br>
+    
+    </form>
+    </main>
+    
+    <footer>
+        <img src="../images/AUM.png">
+        <p>&copy; 2020 Anthony Morence<br></p>
+        </footer>
+        </body>
+</html>

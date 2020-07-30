@@ -1,0 +1,63 @@
+.sidenav {
+    height:auto;
+    width:10em;
+    position: absolute;
+    z-index:1;
+    top:11.5em;
+    margin-top:0em;
+    overflow-x: hidden;
+    padding-top:1em;
+}
+main{padding-left: 150px}
+.sidenav a {
+  padding: 20px 5px 5px 16px;
+  text-decoration: none;
+  font-size: 1px;
+  color: black;
+  display: block;
+}
+.column{
+    float: left;
+    width: 50%;
+}
+.row:after{
+    
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+
+.button {
+  background-color: #f24f00; 
+  border: solid black;
+  color: black;
+  padding: inherit;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: inherit;
+  cursor: pointer;
+  width: 125px
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: black;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: #f24f00;
+  text-align: center;
+  padding: 16px 40px;
+  text-decoration: none;
+}
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+

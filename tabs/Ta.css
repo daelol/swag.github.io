@@ -1,0 +1,31 @@
+
+main {
+    padding:  2em;
+}
+h1 {
+	color: #f24f00;
+    padding-bottom: 1em;
+    text-align: center;
+    
+}
+label {
+	float: left;
+    width: 11em;
+    text-align: right;
+    padding-bottom: .5em;
+}
+
+input {
+    margin-left: 1em;
+    margin-bottom: .5em;
+}
+
+
+
+
+
+
+
+
+
+

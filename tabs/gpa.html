@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+	<meta charset="utf-8" />
+	<title>GPA Calculator</title> 
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/c9_category.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../tabs/gpa.css">
+        
+        
+        
+       
+        
+    </head>
+        
+<header>
+    <img src="../images/nail.gif">
+    <h2>GPA Calculator</h2>
+        <h3>Ready to find out your GPA?</h3>
+    </header>
+    
+<body>
+    <div class="navbar">
+  <a href="../index.html">Home</a>
+  <a href="../tabs/ComputerScience.html">Computer Science Info</a>
+  <a href="../tabs/TA.html">Apply for TA</a>
+  <a href="../tabs/gpa.html">GPA Calculator</a>
+</div>
+
+
+<body>
+    <br>
+<form name="gpacalcform">  
+<center>
+    
+<table border="5" bgcolor=black cellpadding="5" cellspacing="2">
+<th></th>
+<th class="orange">Grade</th>
+<th class="orange">Credit Hour</th>
+<tr>
+
+<td class="orange">Class 1</td>
+<td><input type=text size=5 id="gr1" align=top 
+maxlength=5></td>
+<td><input type=text size=9 id="cr1" align=top 
+maxlength=5></td>
+</tr>
+<tr>
+<td class="orange">Class 2</td>
+<td><input type=text size=5 id="gr2" align=top 
+maxlength=5></td>
+<td><input type=text size=9 id="cr2" align=top 
+maxlength=5></td>
+</tr>
+<tr>
+<td class="orange">Class 3</td>
+<td><input type=text size=5 id="gr3" align=top 
+maxlength=5></td>
+<td><input type=text size=9 id="cr3" align=top 
+maxlength=5></td>
+</tr>
+<tr>
+<td class="orange">Class 4</td>
+<td><input type=text size=5 id="gr4" align=top 
+maxlength=5></td>
+<td><input type=text size=9 id="cr4" align=top 
+maxlength=5></td>
+</tr>
+<tr>
+<td class="orange">Class 5</td>
+<td><input type=text size=5 id="gr5" align=top 
+maxlength=5></td>
+<td><input type=text size=9 id="cr5" align=top 
+maxlength=5></td>
+</tr>
+<tr>
+<td class="orange">Class 6</td>
+<td><input type=text size=5 id="gr6" align=top 
+maxlength=5></td>
+<td><input type=text size=9 id="cr6" align=top 
+maxlength=5></td>
+</tr>
+<tr>
+<td class="orange">Class 7</td>
+<td><input type=text size=5 id="gr7" align=top 
+maxlength=5></td>
+<td><input type=text size=9 id="cr7" align=top 
+maxlength=5></td>
+</tr>
+<tr>
+<td class="orange">Class 8</td>
+<td><input type=text size=5 id="gr8" align=top 
+maxlength=5></td>
+<td><input type=text size=9 id="cr8" align=top 
+maxlength=5></td>
+</tr>
+<tr>
+<td class="orange">Class 9</td>
+<td><input type=text size=5 id="gr9" align=top 
+maxlength=5></td>
+<td><input type=text size=9 id="cr9" align=top 
+maxlength=5></td>
+</tr>
+<tr>
+<td class="orange">Class 10</td>
+<td><input type=text size=5 id="gr10" align=top 
+maxlength=5></td>
+<td><input type=text size=9 id="cr10" align=top 
+maxlength=5></td>
+</tr>
+
+<tr align=center>
+<td colspan=3><input type="button" value="calculate" 
+name="calcbutton"
+onclick="gpacalc()"></td>
+</tr>
+</table>
+</center>
+</form>
+<br><br>
+<script lang="javascript">
+
+function gpacalc(){
+var gr = new Array(9); 
+var cr = new Array(9);
+var ingr = new Array(10);
+var incr = new Array(10);
+var grcount = 10; 
+gr[0] = "a";
+cr[0] = 4.0;
+gr[1] = "A"; 
+cr[1] = 4.0; 
+gr[2] = "B";
+cr[2] = 3.0;
+gr[3] = "b";
+cr[3] = 3.0;
+gr[4] = "C";
+cr[4] = 2.0;
+gr[5] = "c";
+cr[5] = 2.0;
+gr[6] = "D";
+cr[6] = 1.0;
+gr[7] = "d";
+cr[7] = 1.0;
+gr[8] = "F";
+cr[8] = 0.0;
+gr[9] = "f";
+cr[9] = 0.0;
+
+
+ingr[0] = document.getElementById("gr1").value;
+ingr[1] = document.getElementById("gr2").value;
+ingr[2] = document.getElementById("gr3").value;
+ingr[3] = document.getElementById("gr4").value;
+ingr[4] = document.getElementById("gr5").value;
+ingr[5] = document.getElementById("gr6").value;
+ingr[6] = document.getElementById("gr7").value;
+ingr[7] = document.getElementById("gr8").value;
+ingr[8] = document.getElementById("gr9").value;
+ingr[9] = document.getElementById("gr10").value;
+incr[0] = document.getElementById("cr1").value;
+incr[1] = document.getElementById("cr2").value;
+incr[2] = document.getElementById("cr3").value;
+incr[3] = document.getElementById("cr4").value;
+incr[4] = document.getElementById("cr5").value;
+incr[5] = document.getElementById("cr6").value;
+incr[6] = document.getElementById("cr7").value;
+incr[7] = document.getElementById("cr8").value;
+incr[8] = document.getElementById("cr9").value;
+incr[9] = document.getElementById("cr10").value;
+
+var allgr =0;
+var allcr = 0;
+var gpa = 0;
+for (var x = 0; x < 11; x++){
+        if (ingr[x] == "") break;
+        var validgrcheck = 0;
+        for (var xx = 0; xx <= grcount; xx++){
+                if (ingr[x] == gr[xx]){
+                        allgr = allgr + (parseInt(incr[x],10) * cr[xx]);
+                        allcr = allcr + parseInt(incr[x],10);
+                        validgrcheck = 1;
+                        break;
+                        }
+                }
+        if (validgrcheck == 0){
+                alert("ERROR!! could not recognize the grade entered for class " + eval(x +  1) + ". please use standard college grades in the form of A, a, B, b...f");
+                return 0;
+                }
+        }
+if (allcr == 0){
+        alert("ERROR!! you did not enter any credit values!");
+        return 0;
+        }
+
+gpa = allgr / allcr;
+
+
+alert("Hello your GPA is "+eval(gpa));
+
+return 0;
+}
+</script>
+
+<br>
+
+
+
+    <footer>
+        <img src="../images/AUM.png">
+        <p>&copy; 2020 Anthony Morence<br></p>
+        </footer>
+        </body>
+</html>
